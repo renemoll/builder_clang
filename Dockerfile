@@ -1,19 +1,17 @@
 FROM ubuntu:19.10
 LABEL description="Builder with Clang."
-LABEL version="1.0"
+LABEL version="1.1"
 
 RUN apt-get update && \
-	apt-get upgrade -y && \
-	apt-get install -y \
-		build-essential \
+	apt-get install -y --no-install-recommends \
+		ca-certificates \
 		git \
-		bzip2 \
-		wget \
 		clang \
+		make \
 		cmake \
 		python3-minimal \
 		python3-docopt && \
-	apt-get clean
+	rm -rf /var/lib/apt/lists/*
 
 WORKDIR /work
 ADD . /work
