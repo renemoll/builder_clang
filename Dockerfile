@@ -1,6 +1,7 @@
-FROM ubuntu:latest
-LABEL description="Linux container with a Clang build environment."
-LABEL version="1.2"
+FROM ubuntu:jammy
+LABEL author="René Moll"
+LABEL description="Linux container with a Clang-13 build environment."
+LABEL version="1.3"
 
 ENV TZ=Europe/Amsterdam
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone

@@ -2,7 +2,7 @@
 
 A docker image with a Clang build environment.
 
-## How to use
+## How to use the image
 
 The machine features a `/work/` folder to mount your local volume on.
 
