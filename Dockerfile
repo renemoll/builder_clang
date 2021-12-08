@@ -14,6 +14,7 @@ RUN apt-get update && \
 		clang-tidy \
 		clang-format \
 		cppcheck \
+		g++-11 \
 		make \
 		cmake \
 		ninja-build \
